@@ -1,42 +1,51 @@
 # LightHouse
 
-LightHouse 是一个微信小程序项目，在测试 mini-program skills 过程中衍生而来。
+A WeChat mini-program for tracking personal content intake, derived from testing mini-program skills.
 
-## 项目简介
+## About
 
-这是一个每日饮食摄入记录小程序（Daily Intake），帮助用户追踪和管理日常饮食记录。
+LightHouse helps you systematically record, rate, and review your consumption of various media and ideas. Track what you watch, read, listen to, and think about — all in one place.
 
-### 主要功能
+## Features
 
-- **今日** — 查看当天的饮食摄入记录
-- **记录** — 浏览历史饮食记录列表
-- **添加记录** — 新增饮食摄入条目
-- **我的** — 个人中心与设置
+- **Multi-category tracking** — Record content across 5 categories: Podcasts, Videos, Movies, Books, and Ideas
+- **Today view** — See all records created today with time-based greetings
+- **History & filtering** — Browse all records chronologically, filter by category
+- **Rating system** — Give 1-5 star ratings to each entry
+- **Statistics** — View total records, daily counts, streak tracking, and category distribution
+- **Cloud sync** — WeChat login with cloud database backup
 
-## 技术栈
+## Tech Stack
 
-- 微信小程序原生开发
-- 微信云开发（云函数 + 云数据库）
-- 自定义 TabBar 组件
+- WeChat Mini Program (native development)
+- WeChat Cloud Development (Cloud Functions + Cloud Database)
+- Custom TabBar component
 
-## 项目结构
+## Project Structure
 
 ```
-├── app.js / app.json / app.wxss   # 小程序入口与全局配置
+├── app.js / app.json / app.wxss     # App entry and global config
 ├── pages/
-│   ├── index/                     # 今日页面
-│   ├── list/                      # 记录列表页面
-│   ├── add-record/                # 添加记录页面
-│   └── profile/                   # 个人中心页面
-├── components/                    # 公共组件
-├── custom-tab-bar/                # 自定义底部导航栏
-├── cloudfunctions/                # 云函数
-└── utils/                         # 工具函数
+│   ├── index/                       # Today's records
+│   ├── list/                        # Record history with filters
+│   ├── add-record/                  # Add / edit / delete records
+│   └── profile/                     # User profile and statistics
+├── components/
+│   ├── nav-bar/                     # Custom navigation bar
+│   └── intake-card/                 # Record display card
+├── custom-tab-bar/                  # Custom bottom tab navigation
+├── cloudfunctions/
+│   ├── addRecord/                   # Create record
+│   ├── getRecords/                  # Query records and stats
+│   ├── updateRecord/               # Update record
+│   ├── deleteRecord/               # Delete record
+│   └── login/                      # User authentication
+└── utils/                           # Date formatting and category definitions
 ```
 
-## 开发环境
+## Getting Started
 
-1. 安装 [微信开发者工具](https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html)
-2. 导入本项目
-3. 在微信开发者工具中开通云开发环境
-4. 编译运行
+1. Install [WeChat DevTools](https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html)
+2. Import this project
+3. Enable Cloud Development in WeChat DevTools
+4. Build and run
